@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset='utf-8'> <!-- Ensure correct spelling of charset -->
+        <title>Ruffle SWF Player</title>
+    </head>
+    <body>
+        <div id='ruffle'></div>
+        <!-- Load Ruffle self-hosted version or from a CDN if available -->
+        <script src='https://acburgess25.github.io/alexsgames/ruffle.js'></script>
+        <script>
+            // Ensure Ruffle is loaded and document is ready
+            window.addEventListener('DOMContentLoaded', (event) => {
+                var ruffle = window.RufflePlayer.newest();
+                var player = ruffle.createPlayer();
+
+                // Append the player to the designated div and set size
+                var container = document.getElementById('ruffle');
+                container.appendChild(player);
+                container.style.width = '500px';
+                container.style.height = '500px';
+
+                // Load the SWF file into the player
+                player.load('https://acburgess25.github.io/alexsgames/papasfreezeria.swf');
+            });
+        </script>
+    <body>
+    <button onclick="location.href='index.html';" class="game-button">Go Back</button>
+    <!-- Add more buttons as needed for additional games -->
+</body>
+</html>
